@@ -10,6 +10,9 @@ import java.util.Date;
  */
 @Data
 public class Video {
+
+
+    private String serverInfo;
     private Integer id;
     private String title;
     private String summary;

@@ -9,6 +9,7 @@ import space.jachen.domain.Video;
 import space.jachen.service.VideoService;
 import space.jachen.utils.ResponseUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -25,9 +26,12 @@ public class VideoController {
 
 
     @GetMapping("getById/{id}")
-    public Object getById(@PathVariable Integer id){
+    public Object getById(@PathVariable Integer id, HttpServletRequest request){
 
         Video video = videoService.getById(id);
+
+        // 方便知道请求的是哪台机器
+        video.setServerInfo(request.getRequestURI());
 
         return ResponseUtil.resultMap(true,200,"查询成功",video);
 
