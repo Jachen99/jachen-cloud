@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * response 输出响应工具
  *
- * @author Chopper
+ * @author Jachen
  */
 @Slf4j
 public class ResponseUtil {
@@ -112,7 +112,7 @@ public class ResponseUtil {
      */
     public static Map<String, Object> resultMap(boolean flag, Integer code, String msg, Object data) {
 
-        Map<String, Object> resultMap = new HashMap<String, Object>(16);
+        Map<String, Object> resultMap = new HashMap<>(16);
         resultMap.put("success", flag);
         resultMap.put("message", msg);
         resultMap.put("code", code);
