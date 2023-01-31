@@ -1,5 +1,6 @@
 package space.jachen.domain;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.Date;
  * @date 2023/1/31 15:46
  */
 @Data
+@Builder
 public class VideoOrder {
     private Integer id;
     private String outTradeNo;
