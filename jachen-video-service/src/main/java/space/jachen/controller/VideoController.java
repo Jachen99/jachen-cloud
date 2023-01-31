@@ -2,6 +2,7 @@ package space.jachen.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import space.jachen.domain.Video;
@@ -21,6 +22,17 @@ public class VideoController {
 
     @Autowired
     VideoService videoService;
+
+
+    @GetMapping("getById/{id}")
+    public Object getById(@PathVariable Integer id){
+
+        Video video = videoService.getById(id);
+
+        return ResponseUtil.resultMap(true,200,"查询成功",video);
+
+    }
+
 
     @GetMapping("list")
     public Map<String, Object> getList(){

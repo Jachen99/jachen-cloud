@@ -19,6 +19,11 @@ public class VideoServiceImpl implements VideoService {
     VideoDAO videoDAO;
 
     @Override
+    public Video getById(Integer id) {
+        return videoDAO.getById(id);
+    }
+
+    @Override
     public List<Video> getList() {
         return videoDAO.getList();
     }

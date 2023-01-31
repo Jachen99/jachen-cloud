@@ -16,4 +16,5 @@ public interface VideoService {
     List<Video> getList();
 
 
+    Video getById(Integer id);
 }

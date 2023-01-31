@@ -1,6 +1,7 @@
 package space.jachen.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import space.jachen.domain.Video;
 
@@ -16,4 +17,6 @@ public interface VideoDAO {
     @Select("select * from `video`")
     List<Video> getList();
 
+    @Select("select * from `video` where id = #{id}")
+    Video getById(@Param("id") Integer id);
 }
