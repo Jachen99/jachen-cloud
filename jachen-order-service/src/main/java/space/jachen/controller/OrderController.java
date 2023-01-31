@@ -20,11 +20,16 @@ public class OrderController {
     @Autowired
     RestTemplate restTemplate;
 
+    /**
+     * 下单的方法
+     * @param id
+     * @return
+     */
     @GetMapping("/save/{id}")
     public Object save(@PathVariable Integer id){
-        Video v = restTemplate.getForObject("http://127.0.0.1:9000/api/v1/video/getById/"
-        + id, Video.class);
-
+        Video v = restTemplate
+                .getForObject("http://127.0.0.1:9000/api/v1/video/getById/"
+                        + id, Video.class);
         if (v != null) {
             VideoOrder.builder()
                     .videoId(v.getId())

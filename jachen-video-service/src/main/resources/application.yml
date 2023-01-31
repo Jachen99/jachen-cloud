@@ -4,11 +4,15 @@ server:
 spring:
   application:
     name: jachen-video-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/cloud_video?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
+
 
 # 控制台输出sql、下划线转驼峰
 mybatis:
