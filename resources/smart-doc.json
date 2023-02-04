@@ -1,0 +1,11 @@
+{
+  "outPath": "target/doc",
+  "projectName": "video-cloud项目",
+  "packageFilters": "space.jachen.controller.*",
+  "openUrl": "http://localhost:7700/api",
+  "appToken": "8de92ae464124cff815ce75e7732b9ca",
+  "debugEnvName":"本地环境",
+  "debugEnvUrl":"http://127.0.0.1:8080",
+  "tornaDebug": true,
+  "replace": true
+}

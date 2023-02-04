@@ -30,7 +30,7 @@ public class OrderController {
     private DiscoveryClient discoveryClient;
 
     /**
-     * 下单的方法
+     * 视频下单的方法
      * @param id
      * @return
      */

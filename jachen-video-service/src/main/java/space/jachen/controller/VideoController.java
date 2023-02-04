@@ -25,6 +25,12 @@ public class VideoController {
     VideoService videoService;
 
 
+    /**
+     * 根据id获取视频
+     * @param id 视频id
+     * @param request http请求
+     * @return 返回视频对象
+     */
     @GetMapping("getById/{id}")
     public Object getById(@PathVariable Integer id, HttpServletRequest request){
 
@@ -38,6 +44,10 @@ public class VideoController {
     }
 
 
+    /**
+     * 获取全部视频列表
+     * @return 返回一个list集合
+     */
     @GetMapping("list")
     public Map<String, Object> getList(){
 
