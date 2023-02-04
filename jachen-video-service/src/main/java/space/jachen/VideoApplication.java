@@ -11,7 +11,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @date ${DATE} ${TIME}
  */
 @SpringBootApplication
-@EnableDiscoveryClient
 public class VideoApplication {
     public static void main(String[] args) {
         SpringApplication.run(VideoApplication.class);

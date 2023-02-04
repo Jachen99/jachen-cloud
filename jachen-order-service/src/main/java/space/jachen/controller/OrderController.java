@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import space.jachen.domain.Video;
 import space.jachen.domain.VideoOrder;
+import space.jachen.service.VideoService;
 import space.jachen.utils.ResponseUtil;
 
 import java.util.Date;
@@ -29,6 +30,9 @@ public class OrderController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Autowired
+    private VideoService videoService;
+
     /**
      * 视频下单的方法
      * @param id
@@ -48,10 +52,12 @@ public class OrderController {
                 + "/api/v1/video/getById/" + id, Video.class);*/
 
         // 获取服务列表 (可能是集群)
-        List<ServiceInstance> instanceList = discoveryClient
+       /* List<ServiceInstance> instanceList = discoveryClient
                 .getInstances("jachen-video-service");
         Video v = restTemplate.getForObject("http://jachen-video-service"
-                + "/api/v1/video/getById/" + id, Video.class);
+                + "/api/v1/video/getById/" + id, Video.class);*/
+
+        Video v = videoService.getById(id);
 
         if (v != null) {
             VideoOrder.builder()
