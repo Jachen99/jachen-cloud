@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * ${end}
  *
  * @author JaChen
- * @date ${DATE} ${TIME}
+ * @date 2023/2/9
  */
 @SpringBootApplication
 public class VideoApplication {

@@ -14,6 +14,12 @@
 
     <dependencies>
 
+        <!-- 流控组件sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
         <!--添加nacos客户端-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

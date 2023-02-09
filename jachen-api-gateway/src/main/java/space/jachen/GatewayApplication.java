@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * ${end}
  *
  * @author JaChen
- * @date ${DATE} ${TIME}
+ * @date 2023/2/9
  */
 @SpringBootApplication
 public class GatewayApplication {
